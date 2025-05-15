@@ -1,23 +1,25 @@
 import { useState } from "react";
 
+const AVATAR_BASE = "https://api.dicebear.com/7.x/micah/svg";
+
 const App = () => {
   const initialFriends = [
     {
       id: 118836,
       name: "Clark",
-      image: "https://i.pravatar.cc/48?u=118836",
+      image: `${AVATAR_BASE}?seed=118836`,
       balance: 0,
     },
     {
       id: 933372,
       name: "Sarah",
-      image: "https://i.pravatar.cc/48?u=933372",
+      image: `${AVATAR_BASE}?seed=933372`,
       balance: 0,
     },
     {
       id: 499476,
       name: "Anthony",
-      image: "https://i.pravatar.cc/48?u=499476",
+      image: `${AVATAR_BASE}?seed=499476`,
       balance: 0,
     },
   ];
@@ -114,7 +116,7 @@ function Friend({ friend, onSelection, selectedFriend }) {
 
   return (
     <li className={isSelected ? "selected" : ""}>
-      <img src={friend.image} alt={friend.name} />
+      <img src={friend.image} alt={friend.name} width={48} height={48} />
       <h3>{friend.name}</h3>
       {friend.balance < 0 && (
         <p className="red">
@@ -137,7 +139,7 @@ function Friend({ friend, onSelection, selectedFriend }) {
 
 function FormAddFriend({ onAddFriend }) {
   const [name, setName] = useState("");
-  const [image, setImage] = useState("https://i.pravatar.cc/48");
+  const [image, setImage] = useState(AVATAR_BASE);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -147,7 +149,7 @@ function FormAddFriend({ onAddFriend }) {
     const id = crypto.randomUUID();
     const newFriend = {
       name,
-      image: `${image}?=${id}`,
+      image: `${image}?seed=${id}`,
       balance: 0,
       id,
     };
@@ -155,7 +157,7 @@ function FormAddFriend({ onAddFriend }) {
     onAddFriend(newFriend);
 
     setName("");
-    setImage("https://i.pravatar.cc/48");
+    setImage(AVATAR_BASE);
   }
 
   return (
@@ -198,7 +200,7 @@ function FormSplitBill({ selected, onSplitBill }) {
 
       <label>💸 Bill Value</label>
       <input
-        type="text"
+        type="number"
         value={bill}
         onChange={(e) => setBill(Number(e.target.value))}
         placeholder="0"
@@ -206,7 +208,7 @@ function FormSplitBill({ selected, onSplitBill }) {
 
       <label>🧍 Your Expense</label>
       <input
-        type="text"
+        type="number"
         value={paidByUser}
         onChange={(e) =>
           setPaidByUser(
@@ -217,7 +219,7 @@ function FormSplitBill({ selected, onSplitBill }) {
       />
 
       <label>🧑‍🤝‍🧑 {selected.name}'s expense</label>
-      <input type="text" disabled value={paidByFriend} />
+      <input type="number" disabled value={paidByFriend} />
 
       <label>🫣 Who's paying the bill</label>
       <select value={whoPays} onChange={(e) => setWhoPays(e.target.value)}>
