@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# SplitBites 🍽️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to **SplitBites**, a smart and minimal bill-splitting app built with React. Whether you’re sharing a pizza with friends or managing group expenses during a trip, SplitBites makes it easy to track who owes what and settle up fairly.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Features 🌟
 
-### `npm start`
+- **Add Friends**: Add friends with unique avatars generated using Multiavatar.
+- **Select Friend**: Select a friend to split a bill with.
+- **Split Bill**: Enter total bill amount, your share, and who paid—SplitBites will do the math!
+- **Balance Tracker**: Easily see if you owe your friend or if they owe you.
+- **Responsive UI**: Clean layout with intuitive flow and usability.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack ⚙️
 
-### `npm test`
+This project was built using:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React** – JavaScript library for building user interfaces
+- **CSS** – For styling and layout
+- **Multiavatar API** – Used for generating unique avatar images
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage 🎯
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Add a Friend**: Click the `Add Friend` button and input the friend's name. An avatar will be auto-generated.
+2. **Split a Bill**: Select a friend, enter the bill details, and specify who paid.
+3. **View Balances**: Instantly see the balance updates—know who owes whom.
+4. **Reset/Close**: Close the form or change your selection any time.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Live Demo 🚀
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Check out the live version of the application here:  
+[**SplitBites**](https://split-bites.vercel.app/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
