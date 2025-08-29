@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import useLocalStorage from "./hook/LocalStorage";
 const AVATAR_BASE = "https://api.dicebear.com/7.x/micah/svg";
 
 const App = () => {
@@ -24,7 +24,7 @@ const App = () => {
     },
   ];
 
-  const [friends, setFriends] = useState(initialFriends);
+  const [friends, setFriends] = useLocalStorage("friends", initialFriends);
   const [showAddFriend, setShowAddFriend] = useState(false);
   const [selectedFriend, setSelectedFriend] = useState(null);
 
