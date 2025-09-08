@@ -79,6 +79,7 @@ const App = () => {
 
         {selectedFriend && (
           <FormSplitBill
+            key={selectedFriend.id}
             selected={selectedFriend}
             onSplitBill={handleSplitBill}
           />
